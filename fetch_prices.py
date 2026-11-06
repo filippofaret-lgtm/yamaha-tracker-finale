@@ -1,10 +1,11 @@
-import json, os, re, datetime, urllib.request, urllib.parse
+import csv, json, os, re, datetime, urllib.request, urllib.parse
 
 API_KEY = os.environ["SERPAPI_KEY"]
 TG_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID")
 BUDGET = 800
 OUT = "docs/prices.json"
+CSV_OUT = "docs/storico.csv"
 
 GUITARS = [
     {"id": "llta", "name": "Yamaha LLTA", "query": "Yamaha LLTA chitarra acustica", "must": "llta"},
@@ -57,6 +58,23 @@ def notify(text):
     urllib.request.urlopen(f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage", data=data, timeout=30)
 
 
+def save_csv(today, fresh):
+    rows = []
+    if os.path.exists(CSV_OUT):
+        with open(CSV_OUT, encoding="utf-8-sig", newline="") as f:
+            rows = list(csv.reader(f, delimiter=";"))[1:]
+    names = {r[1] for r in fresh}
+    rows = [r for r in rows if not (r[0] == today and r[1] in names)]
+    for d, m, s, t, p in fresh:
+        rows.append([d, m, s, t, str(p).replace(".", ",")])
+    rows.sort(key=lambda r: (r[0], r[1], float(r[4].replace(",", "."))))
+    os.makedirs("docs", exist_ok=True)
+    with open(CSV_OUT, "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.writer(f, delimiter=";")
+        w.writerow(["data", "modello", "negozio", "titolo", "prezzo"])
+        w.writerows(rows)
+
+
 def main():
     old = {}
     if os.path.exists(OUT):
@@ -64,6 +82,7 @@ def main():
             old = {g["id"]: g for g in json.load(f).get("guitars", [])}
     today = datetime.date.today().isoformat()
     result = []
+    fresh = []
     for g in GUITARS:
         prev = old.get(g["id"], {})
         history = [h for h in prev.get("history", []) if h["date"] != today]
@@ -75,6 +94,8 @@ def main():
             result.append({**prev, "id": g["id"], "name": g["name"], "offers": offers,
                            "min": prev.get("min"), "history": history})
             continue
+        for o in offers:
+            fresh.append((today, g["name"], o["store"], o["title"], o["price"]))
         low = offers[0]["price"] if offers else None
         last = history[-1]["min"] if history else None
         if low is not None:
@@ -82,6 +103,7 @@ def main():
             if low <= BUDGET and (last is None or low < last):
                 notify(f"{g['name']}: {low:.0f} € da {offers[0]['store']}\n{offers[0]['link']}")
         result.append({"id": g["id"], "name": g["name"], "offers": offers, "min": low, "history": history})
+    save_csv(today, fresh)
     os.makedirs("docs", exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"updated": datetime.datetime.utcnow().isoformat() + "Z", "budget": BUDGET, "guitars": result},
