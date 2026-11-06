@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prezzi chitarre Yamaha</title>
+<style>
+:root{--bg:#faf8f5;--card:#fff;--tx:#1d1b18;--mu:#6b665e;--bd:#e5e0d8;--ok:#1b7f4b;--ac:#b4561f}
+@media(prefers-color-scheme:dark){:root{--bg:#161412;--card:#201d1a;--tx:#f0ece6;--mu:#a09a90;--bd:#38332d;--ok:#4cc68a;--ac:#e8895a}}
+*{box-sizing:border-box}body{margin:0;padding:24px 16px;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,sans-serif}
+main{max-width:960px;margin:auto}h1{margin:0 0 4px}.sub{color:var(--mu);margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px}
+.card h2{margin:0;font-size:1.1rem}.min{font-size:2rem;font-weight:700;margin:4px 0}
+.ok{color:var(--ok)}.over{color:var(--ac)}.mu{color:var(--mu);font-size:.85rem}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.9rem}
+td{padding:5px 0;border-top:1px solid var(--bd)}td:last-child{text-align:right;white-space:nowrap}
+a{color:inherit}svg{width:100%;height:40px;margin-top:8px}
+</style>
+</head>
+<body>
+<main>
+<h1>Prezzi chitarre Yamaha</h1>
+<p class="sub" id="sub">Caricamento…</p>
+<div class="grid" id="grid"></div>
+</main>
+<script>
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e};
+const eur=n=>n.toLocaleString('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+function spark(h){
+  if(h.length<2)return null;
+  const v=h.map(x=>x.min),lo=Math.min(...v),hi=Math.max(...v),r=hi-lo||1;
+  const p=v.map((y,i)=>`${(i/(v.length-1))*300},${36-((y-lo)/r)*32}`).join(' ');
+  const s=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  s.setAttribute('viewBox','0 0 300 40');s.setAttribute('preserveAspectRatio','none');
+  s.innerHTML=`<polyline points="${p}" fill="none" stroke="var(--ac)" stroke-width="2"/>`;return s;
+}
+fetch('prices.json').then(r=>r.json()).then(d=>{
+  document.getElementById('sub').textContent='Budget '+eur(d.budget)+' · aggiornato il '+new Date(d.updated).toLocaleString('it-IT');
+  const grid=document.getElementById('grid');
+  d.guitars.forEach(g=>{
+    const c=el('div','card');c.appendChild(el('h2','',g.name));
+    if(g.min==null){c.appendChild(el('p','mu','Nessuna offerta trovata.'));grid.appendChild(c);return}
+    c.appendChild(el('div','min '+(g.min<=d.budget?'ok':'over'),eur(g.min)));
+    c.appendChild(el('div','mu',g.min<=d.budget?'Dentro il budget':'Sopra il budget di '+eur(g.min-d.budget)));
+    const sp=spark(g.history);if(sp)c.appendChild(sp);
+    const t=el('table');
+    g.offers.forEach(o=>{const tr=el('tr');const a=el('a','',o.store);a.href=o.link;a.target='_blank';a.rel='noopener';
+      const td=el('td');td.appendChild(a);tr.appendChild(td);tr.appendChild(el('td','',eur(o.price)));t.appendChild(tr)});
+    c.appendChild(t);grid.appendChild(c);
+  });
+}).catch(()=>{document.getElementById('sub').textContent='Ancora nessun dato: lancia il workflow una prima volta.'});
+</script>
+</body>
+</html>
