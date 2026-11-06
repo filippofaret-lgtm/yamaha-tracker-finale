@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T14:20:10.705379Z",
+ "updated": "2026-11-06T14:32:22.125093Z",
  "budget": 800,
  "guitars": [
   {
@@ -82,18 +82,6 @@
    "name": "Yamaha LL16",
    "offers": [
     {
-     "store": "Reverb",
-     "title": "Yamaha LL16 ARE 12 String Acoustic Electric Guitar",
-     "price": 830.69,
-     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:11448920126903585112,productid:1782098413391951170,headlineOfferDocid:11932909155095684778,imageDocid:214571171205195247,rds:PC_14741597312972118567|PROD_PC_14741597312972118567,gpcid:14741597312972118567,mid:576462892680193556,pvt:hg&hl=it&gl=it&udm=28"
-    },
-    {
-     "store": "Ray's Midbell Music",
-     "title": "YAMAHA LL16MHB Original Jumbo-Body A/E Guitar Solid Engelmann Spruce Top",
-     "price": 859.95,
-     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:11468561804068826884,productid:11816213224660768536,headlineOfferDocid:12215804533766139151,imageDocid:9284591613453548179,gpcid:15322333370999635028,mid:576462915616808745,pvt:hg&hl=it&gl=it&udm=28"
-    },
-    {
      "store": "StrumentiMusicali.net",
      "title": "Yamaha Ll16m Are Natural",
      "price": 939.0,
@@ -128,13 +116,25 @@
      "title": "Vendita Yamaha LL16 ARE Natural - Clan della Musica",
      "price": 1119.0,
      "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=productid:5575518963563043520,headlineOfferDocid:5575518963563043520,imageDocid:1246621710820265946,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "Music Store Professional IT",
+     "title": "Yamaha Ll16lare FOLK GUITAR Natural ARE",
+     "price": 1126.7,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:104529530739505361,productid:3372089142724093573,headlineOfferDocid:1573646224144867106,imageDocid:11961983883751422174,rds:PC_297780134200123383|PROD_PC_297780134200123383,gpcid:297780134200123383,mid:576462898602789104,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "Ciaravola.it",
+     "title": "Yamaha LL16D ARE Black",
+     "price": 1129.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=productid:4620652762669888847,headlineOfferDocid:4620652762669888847,imageDocid:5420217395316837566,pvt:hg&hl=it&gl=it&udm=28"
     }
    ],
-   "min": 830.69,
+   "min": 939.0,
    "history": [
     {
      "date": "2026-11-06",
-     "min": 830.69
+     "min": 939.0
     }
    ]
   }
