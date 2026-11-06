@@ -1,0 +1,142 @@
+{
+ "updated": "2026-11-06T14:20:10.705379Z",
+ "budget": 800,
+ "guitars": [
+  {
+   "id": "llta",
+   "name": "Yamaha LLTA",
+   "offers": [
+    {
+     "store": "Cappellani Music Megastore",
+     "title": "Yamaha LL-TA TransAcoustic",
+     "price": 949.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LLTA chitarra acustica&prds=catalogid:5833027138492612494,productid:15025323908122129033,headlineOfferDocid:13985187360337749215,imageDocid:7179448609684559,rds:PC_14596230923457869568|PROD_PC_14596230923457869568,gpcid:14596230923457869568,mid:576462808307257353,pvt:hg&hl=it&gl=it&udm=28"
+    }
+   ],
+   "min": 949.0,
+   "history": [
+    {
+     "date": "2026-11-06",
+     "min": 949.0
+    }
+   ]
+  },
+  {
+   "id": "fgta",
+   "name": "Yamaha FGTA",
+   "offers": [
+    {
+     "store": "Ciaravola.it",
+     "title": "Yamaha FG-TA Vintage Tint",
+     "price": 539.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha FGTA chitarra acustica&prds=catalogid:18073049903913240474,productid:10692533273888589643,headlineOfferDocid:3585221285112346939,imageDocid:5788375674628780368,rds:PC_6890097271127359728|PROD_PC_6890097271127359728,gpcid:6890097271127359728,mid:576462896624256025,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "Musicarte Lecce",
+     "title": "Yamaha Fgta",
+     "price": 699.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha FGTA chitarra acustica&prds=catalogid:1867597693854195710,productid:2833693996528793075,headlineOfferDocid:11586651794015352666,imageDocid:2127332524446256165,rds:PC_4544257667307020844|PROD_PC_4544257667307020844,gpcid:4544257667307020844,mid:576462563298017001,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "Your Music",
+     "title": "Yamaha Fg-Ta Transacoustic Nera Lucida Chitarra Acustica Elettrificata",
+     "price": 705.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha FGTA chitarra acustica&prds=productid:13918302681876281770,headlineOfferDocid:13918302681876281770,imageDocid:3898957893349961643,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "Arcobaleno Centro Musicale",
+     "title": "Yamaha FG-TA",
+     "price": 709.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha FGTA chitarra acustica&prds=catalogid:1347771176053781945,productid:12118225136000069601,headlineOfferDocid:15313743035645162544,imageDocid:427584128181730908,rds:PC_1386180567997927753|PROD_PC_1386180567997927753,gpcid:1386180567997927753,mid:576462916523025235,pvt:hg&hl=it&gl=it&udm=28"
+    }
+   ],
+   "min": 539.0,
+   "history": [
+    {
+     "date": "2026-11-06",
+     "min": 539.0
+    }
+   ]
+  },
+  {
+   "id": "tag1e",
+   "name": "Yamaha TAG1E",
+   "offers": [
+    {
+     "store": "thomann.it",
+     "title": "Yamaha TAG1 E",
+     "price": 598.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha TAG1E chitarra&prds=catalogid:16778891881060478707,productid:12629966688598053786,headlineOfferDocid:5834311324450512567,imageDocid:917117355500166031,rds:PC_13015487268275516839|PROD_PC_13015487268275516839,gpcid:13015487268275516839,mid:576462568169283739,pvt:hg&hl=it&gl=it&udm=28"
+    }
+   ],
+   "min": 598.0,
+   "history": [
+    {
+     "date": "2026-11-06",
+     "min": 598.0
+    }
+   ]
+  },
+  {
+   "id": "ll16",
+   "name": "Yamaha LL16",
+   "offers": [
+    {
+     "store": "Reverb",
+     "title": "Yamaha LL16 ARE 12 String Acoustic Electric Guitar",
+     "price": 830.69,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:11448920126903585112,productid:1782098413391951170,headlineOfferDocid:11932909155095684778,imageDocid:214571171205195247,rds:PC_14741597312972118567|PROD_PC_14741597312972118567,gpcid:14741597312972118567,mid:576462892680193556,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "Ray's Midbell Music",
+     "title": "YAMAHA LL16MHB Original Jumbo-Body A/E Guitar Solid Engelmann Spruce Top",
+     "price": 859.95,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:11468561804068826884,productid:11816213224660768536,headlineOfferDocid:12215804533766139151,imageDocid:9284591613453548179,gpcid:15322333370999635028,mid:576462915616808745,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "StrumentiMusicali.net",
+     "title": "Yamaha Ll16m Are Natural",
+     "price": 939.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:290881555069187041,productid:3008156321050389041,headlineOfferDocid:4756878039155018064,imageDocid:10131918128343440878,rds:PC_273031422805588700|PROD_PC_273031422805588700,gpcid:273031422805588700,mid:576462892667211977,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "subito.it",
+     "title": "Yamaha LL16 ARE Brown Sunburst",
+     "price": 940.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:9955174287464210900,productid:17230795870214303495,headlineOfferDocid:12433216186804934366,imageDocid:14099840293122168160,rds:PC_1646231296210334814|PROD_PC_1646231296210334814,gpcid:1646231296210334814,mid:576462892695298929,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "StrumentiMusicali.net",
+     "title": "Yamaha Ll16l Are Natural",
+     "price": 1019.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:17465544378170587917,productid:715155264614208443,headlineOfferDocid:13326351764581437280,imageDocid:9147934945344465899,rds:PC_737193811124211953|PROD_PC_737193811124211953,gpcid:737193811124211953,mid:576462892691066057,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "StrumentiMusicali.net",
+     "title": "Yamaha Ll16 Are Dark Tinted",
+     "price": 1059.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:8398168854476361963,productid:2959551470895227953,headlineOfferDocid:9395159515174233719,imageDocid:9292423831922514298,rds:PC_18095872422172883351|PROD_PC_18095872422172883351,gpcid:18095872422172883351,mid:576462897988093652,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "Musicarte Lecce",
+     "title": "Yamaha LL16 ARE",
+     "price": 1099.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=catalogid:1758489921128486423,productid:18196462812678603354,headlineOfferDocid:1817352530755129312,imageDocid:15836396017294059074,rds:PC_1043940188522078315|PROD_PC_1043940188522078315,gpcid:1043940188522078315,mid:576462225955596845,pvt:hg&hl=it&gl=it&udm=28"
+    },
+    {
+     "store": "Clan della Musica",
+     "title": "Vendita Yamaha LL16 ARE Natural - Clan della Musica",
+     "price": 1119.0,
+     "link": "https://www.google.it/search?ibp=oshop&q=Yamaha LL16 chitarra acustica&prds=productid:5575518963563043520,headlineOfferDocid:5575518963563043520,imageDocid:1246621710820265946,pvt:hg&hl=it&gl=it&udm=28"
+    }
+   ],
+   "min": 830.69,
+   "history": [
+    {
+     "date": "2026-11-06",
+     "min": 830.69
+    }
+   ]
+  }
+ ]
+}
