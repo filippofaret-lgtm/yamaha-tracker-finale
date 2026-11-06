@@ -12,8 +12,10 @@ GUITARS = [
     {"id": "tag1e", "name": "Yamaha TAG1E", "query": "Yamaha TAG1E chitarra", "must": "tag1e"},
     {"id": "ll16", "name": "Yamaha LL16", "query": "Yamaha LL16 chitarra acustica", "must": "ll16"},
 ]
-BAD = ["custodia", "corde", "cover", "capotasto", "tracolla", "plettri", "borsa", "gigbag", "supporto"]
+BAD = ["custodia", "corde", "cover", "capotasto", "tracolla", "plettri", "borsa", "gigbag", "supporto",
+       "12 string", "12-string", "12 corde"]
 MIN_PRICE = 150  # scarta accessori
+EXCLUDE_STORES = ["reverb", "ray's midbell"]  # negozi esteri/usato: togli dalla lista per includerli
 
 
 def norm(s):
@@ -37,6 +39,8 @@ def offers_for(g):
         if price is None or price < MIN_PRICE or g["must"] not in norm(title):
             continue
         if any(b in title.lower() for b in BAD):
+            continue
+        if any(x in r.get("source", "").lower() for x in EXCLUDE_STORES):
             continue
         out.append({
             "store": r.get("source", "?"), "title": title, "price": price,
